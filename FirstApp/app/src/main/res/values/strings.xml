@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">FirstApp</string>
+    <string name="first_android_app">First Android App</string>
+    <string name="checkbox">CheckBox</string>
+    <string name="type_some_text">Type some text…</string>
+    <string name="magic_button">Magic button</string>
+    <string name="togglebutton">ToggleButton</string>
+    <string name="the_button_is_not_working">(the button is not working now)</string>
+    <string name="enable_notifications">Enable notifications</string>
+    <string name="check_last_updates">Check last updates</string>
+    <string name="unlock">Unlock</string>
+    <string name="lock">Lock</string>
 </resources>
