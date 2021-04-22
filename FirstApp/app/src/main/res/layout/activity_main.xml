@@ -1,18 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#030110"
+        android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:fontFamily="casual"
+            android:text="@string/first_android_app"
+            android:textAlignment="center"
+            android:textColor="#40E81A"
+            android:textSize="36sp" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName2"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="83dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:fontFamily="cursive"
+            android:hint="@string/type_some_text"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textColor="#40E81A"
+            android:textColorHint="#B1D1AD"
+            android:textSize="30sp"
+            android:textStyle="italic" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="154dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#1AA137"
+            android:fontFamily="serif"
+            android:text="@string/the_button_is_not_working"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#031000"
+            android:textSize="20sp"
+            android:textStyle="normal|italic"
+            app:cornerRadius="100dp"
+            app:icon="@android:drawable/ic_lock_power_off"
+            app:iconGravity="textStart"
+            app:iconPadding="6dp"
+            app:iconSize="150dp"
+            app:iconTint="#090000"
+            app:iconTintMode="src_in" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:fontFamily="serif"
+            android:showText="false"
+            android:text="@string/enable_notifications"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#C7E8BD"
+            android:textSize="30sp"
+            android:trackTint="#FEFFFE" />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:fontFamily="serif"
+            android:text="@string/check_last_updates"
+            android:textColor="#C7E8BD"
+            android:textSize="24sp" />
+
+        <ToggleButton
+            android:id="@+id/toggleButton"
+            android:layout_width="match_parent"
+            android:layout_height="123dp"
+            android:backgroundTint="#1AA137"
+            android:buttonTint="#D3C01D"
+            android:contextClickable="true"
+            android:textOff="@string/unlock"
+            android:textOn="@string/lock"
+            android:textSize="20sp"
+            android:textStyle="bold|italic" />
+
+    </LinearLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>
