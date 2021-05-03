@@ -2,7 +2,9 @@ package ru.mmn.calcapp;
 
 import android.widget.TextView;
 
-public class Calculator {
+import java.io.Serializable;
+
+public class Calculator implements Serializable {
 
     private double valueOne = Double.NaN;
     private double valueTwo;
@@ -15,6 +17,10 @@ public class Calculator {
 
     public void setCurrentAction(char currentAction) {
         this.currentAction = currentAction;
+    }
+
+    public char getCurrentAction(){
+        return currentAction;
     }
 
     public char getAddition() {

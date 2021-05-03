@@ -1,8 +1,10 @@
 package ru.mmn.calcapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -12,9 +14,39 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
+    private final static String keyCalculator = "Calculator";
     TextView calcView;
     TextView resultView;
     Calculator calculator;
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle instanceState) {
+        super.onSaveInstanceState(instanceState);
+        instanceState.putSerializable(keyCalculator, calculator);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle instanceState) {
+        super.onRestoreInstanceState(instanceState);
+        calculator = (Calculator) instanceState.getSerializable(keyCalculator);
+        setTextViews();
+    }
+
+    private void setTextViews() {
+        setView(resultView, calculator);
+        // для calcView пока сделал атрибут freezesText
+    }
+
+    private void setView(TextView resultView, Calculator calculator) {
+        if (calculator.getCurrentAction() == calculator.getAddition())
+            resultView.setText(String.format("%s + ", calculator.getValueOne()));
+        else if (calculator.getCurrentAction() == calculator.getSubtraction())
+            resultView.setText(String.format("%s - ", calculator.getValueOne()));
+        else if (calculator.getCurrentAction() == calculator.getMultiplication())
+            resultView.setText(String.format("%s × ", calculator.getValueOne()));
+        else if (calculator.getCurrentAction() == calculator.getDivision())
+            resultView.setText(String.format("%s ÷ ", calculator.getValueOne()));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -201,7 +233,6 @@ public class MainActivity extends AppCompatActivity {
                 //...
             }
         });
-
 
     }
 }
