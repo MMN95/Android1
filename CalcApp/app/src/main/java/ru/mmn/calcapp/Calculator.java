@@ -4,7 +4,7 @@ import android.widget.TextView;
 
 public class Calculator {
 
-    private double valueOne;
+    private double valueOne = Double.NaN;
     private double valueTwo;
 
     private static final char addition = '+';

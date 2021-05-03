@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                calcView.setText(calcView.getText() + "2");
+                calcView.setText(String.format("%s2", calcView.getText()));
             }
         });
 
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                calcView.setText(calcView.getText() + "3");
+                calcView.setText(String.format("%s3", calcView.getText()));
             }
         });
 
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                calcView.setText(calcView.getText() + "4");
+                calcView.setText(String.format("%s4", calcView.getText()));
             }
         });
 
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         button5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                calcView.setText(calcView.getText() + "5");
+                calcView.setText(String.format("%s5", calcView.getText()));
             }
         });
 
@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
         button6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                calcView.setText(calcView.getText() + "6");
+                calcView.setText(String.format("%s6", calcView.getText()));
             }
         });
 
@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         button7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                calcView.setText(calcView.getText() + "7");
+                calcView.setText(String.format("%s7", calcView.getText()));
             }
         });
 
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
         button8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                calcView.setText(calcView.getText() + "8");
+                calcView.setText(String.format("%s8", calcView.getText()));
             }
         });
 
@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
         button9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                calcView.setText(calcView.getText() + "9");
+                calcView.setText(String.format("%s9", calcView.getText()));
             }
         });
 
@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
         button0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                calcView.setText(calcView.getText() + "0");
+                calcView.setText(String.format("%s0", calcView.getText()));
             }
         });
 
@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 calculator.setCurrentAction(calculator.getAddition());
                 calculator.calculate(calcView);
-                resultView.setText((int) calculator.getValueOne() + " + ");
+                resultView.setText(String.format("%s + ", calculator.getValueOne()));
                 calcView.setText(null);
 
             }
@@ -125,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 calculator.setCurrentAction(calculator.getSubtraction());
                 calculator.calculate(calcView);
-                resultView.setText((int) calculator.getValueOne() + " - ");
+                resultView.setText(String.format("%s - ", calculator.getValueOne()));
                 calcView.setText(null);
             }
         });
@@ -136,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 calculator.setCurrentAction(calculator.getMultiplication());
                 calculator.calculate(calcView);
-                resultView.setText((int) calculator.getValueOne() + " × ");
+                resultView.setText(String.format("%s × ", calculator.getValueOne()));
                 calcView.setText(null);
             }
         });
@@ -147,7 +147,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 calculator.setCurrentAction(calculator.getDivision());
                 calculator.calculate(calcView);
-                resultView.setText((int) calculator.getValueOne() + " ÷ ");
+                resultView.setText(String.format("%s ÷ ", calculator.getValueOne()));
                 calcView.setText(null);
             }
         });
@@ -157,12 +157,50 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 calculator.calculate(calcView);
-                resultView.setText(" = " + calculator.getValueOne());
+                resultView.setText(String.format(" = %s", calculator.getValueOne()));
                 calculator.setValueOne(Double.NaN);
                 calculator.setCurrentAction('0');
             }
         });
 
+        Button buttonAC = findViewById(R.id.buttonAC);
+        buttonAC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                resultView.setText(null);
+                calcView.setText(null);
+                calculator.setValueOne(Double.NaN);
+                calculator.setCurrentAction('0');
+            }
+        });
+
+        Button buttonDel = findViewById(R.id.buttonDel);
+        buttonDel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String str = calcView.getText().toString();
+                if (str.length() >= 1) {
+                    str = str.substring(0, str.length() - 1);
+                    calcView.setText(str);
+                } else if (str.length() <= 1) calcView.setText("0");
+            }
+        });
+
+        Button buttonPoint = findViewById(R.id.buttonPoint);
+        buttonPoint.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                calcView.setText(String.format("%s.", calcView.getText()));
+            }
+        });
+
+        Button buttonPercent = findViewById(R.id.buttonPercent);
+        buttonPercent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //...
+            }
+        });
 
 
     }

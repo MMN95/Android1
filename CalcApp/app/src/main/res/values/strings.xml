@@ -19,5 +19,5 @@
     <string name="button_point">.</string>
     <string name="button_divide">÷</string>
     <string name="calcView"> </string>
-    <string name="resultView">0</string>
+    <string name="resultView"> </string>
 </resources>
