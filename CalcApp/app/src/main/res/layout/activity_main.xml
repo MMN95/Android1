@@ -74,7 +74,7 @@
             app:strokeWidth="2dp" />
 
         <Button
-            android:id="@+id/buttonEqual"
+            android:id="@+id/buttonEquals"
             style="@style/Widget.MaterialComponents.Button"
             android:layout_width="0dp"
             android:layout_height="match_parent"
