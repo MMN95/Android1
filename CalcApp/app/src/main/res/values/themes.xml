@@ -13,4 +13,19 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="CalcButtonStyle">
+        <!-- Button sizes -->
+        <item name="android:insetTop">@dimen/buttonInsetTop</item>
+        <item name="android:insetBottom">@dimen/buttonInsetBottom</item>
+        <item name="android:textSize">@dimen/buttonTextSize</item>
+        <item name="cornerRadius">@dimen/buttonCornerRadius</item>
+        <item name="strokeWidth">@dimen/buttonStrokeWidth</item>
+        <!-- Button colors -->
+        <item name="android:backgroundTint">@color/buttonBackgroundTint</item>
+        <item name="strokeColor">@color/buttonStrokeColor</item>
+        <item name="android:textColor">@color/buttonTextColor</item>
+
+    </style>
+
 </resources>

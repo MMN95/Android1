@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="buttonInsetTop">0dp</dimen>
+    <dimen name="buttonInsetBottom">0dp</dimen>
+    <dimen name="buttonTextSize">20sp</dimen>
+    <dimen name="buttonCornerRadius">0dp</dimen>
+    <dimen name="buttonStrokeWidth">1dp</dimen>
+    <dimen name="buttonIconPadding">0dp</dimen>
+    <dimen name="buttonIconSize">30dp</dimen>
+</resources>
