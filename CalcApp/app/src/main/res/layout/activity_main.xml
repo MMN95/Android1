@@ -38,7 +38,7 @@
         android:layout_height="65dp"
         android:orientation="horizontal">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonAC"
             style="@style/Widget.MaterialComponents.Button"
             android:layout_width="0dp"
@@ -55,7 +55,7 @@
             app:strokeColor="#00000000"
             app:strokeWidth="2dp" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonDel"
             style="@style/Widget.MaterialComponents.Button"
             android:layout_width="0dp"
@@ -74,7 +74,7 @@
             app:strokeColor="#00000000"
             app:strokeWidth="2dp" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonEquals"
             style="@style/Widget.MaterialComponents.Button"
             android:layout_width="0dp"
@@ -98,7 +98,7 @@
         android:layout_height="65dp"
         android:orientation="horizontal">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_1"
             style="@style/Widget.MaterialComponents.Button"
             android:layout_width="wrap_content"
@@ -115,7 +115,7 @@
             app:strokeColor="#80000000"
             app:strokeWidth="2dp" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_2"
             style="@style/Widget.MaterialComponents.Button"
             android:layout_width="wrap_content"
@@ -131,7 +131,7 @@
             app:strokeColor="#80000000"
             app:strokeWidth="2dp" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_3"
             style="@style/Widget.MaterialComponents.Button"
             android:layout_width="wrap_content"
@@ -147,7 +147,7 @@
             app:strokeColor="#80000000"
             app:strokeWidth="2dp" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonPlus"
             style="@style/Widget.MaterialComponents.Button"
             android:layout_width="wrap_content"
@@ -170,7 +170,7 @@
         android:layout_height="65dp"
         android:orientation="horizontal">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_4"
             style="@style/Widget.MaterialComponents.Button"
             android:layout_width="wrap_content"
@@ -186,7 +186,7 @@
             app:strokeColor="#80000000"
             app:strokeWidth="2dp" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_5"
             style="@style/Widget.MaterialComponents.Button"
             android:layout_width="wrap_content"
@@ -202,7 +202,7 @@
             app:strokeColor="#80000000"
             app:strokeWidth="2dp" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_6"
             style="@style/Widget.MaterialComponents.Button"
             android:layout_width="wrap_content"
@@ -218,7 +218,7 @@
             app:strokeColor="#80000000"
             app:strokeWidth="2dp" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonMinus"
             style="@style/Widget.MaterialComponents.Button"
             android:layout_width="wrap_content"
@@ -241,7 +241,7 @@
         android:layout_height="65dp"
         android:orientation="horizontal">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_7"
             style="@style/Widget.MaterialComponents.Button"
             android:layout_width="wrap_content"
@@ -257,7 +257,7 @@
             app:strokeColor="#80000000"
             app:strokeWidth="2dp" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_8"
             style="@style/Widget.MaterialComponents.Button"
             android:layout_width="wrap_content"
@@ -273,7 +273,7 @@
             app:strokeColor="#80000000"
             app:strokeWidth="2dp" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_9"
             style="@style/Widget.MaterialComponents.Button"
             android:layout_width="wrap_content"
@@ -289,7 +289,7 @@
             app:strokeColor="#80000000"
             app:strokeWidth="2dp" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonMultiply"
             style="@style/Widget.MaterialComponents.Button"
             android:layout_width="wrap_content"
@@ -312,7 +312,7 @@
         android:layout_height="65dp"
         android:orientation="horizontal">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonPercent"
             style="@style/Widget.MaterialComponents.Button"
             android:layout_width="wrap_content"
@@ -329,7 +329,7 @@
             app:strokeColor="#00000000"
             app:strokeWidth="2dp" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_0"
             style="@style/Widget.MaterialComponents.Button"
             android:layout_width="wrap_content"
@@ -345,7 +345,7 @@
             app:strokeColor="#80000000"
             app:strokeWidth="2dp" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonPoint"
             style="@style/Widget.MaterialComponents.Button"
             android:layout_width="wrap_content"
@@ -362,7 +362,7 @@
             app:strokeColor="#00000000"
             app:strokeWidth="2dp" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonDivide"
             style="@style/Widget.MaterialComponents.Button"
             android:layout_width="wrap_content"
