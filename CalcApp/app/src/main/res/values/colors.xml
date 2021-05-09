@@ -7,8 +7,18 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="buttonTextColor">#FFFFFF</color>
-    <color name="buttonStrokeColor">#00000000</color>
-    <color name="buttonBackgroundTint">#65000000</color>
-    <color name="buttonIconTint">#FFFFFF</color>
+
+    <!-- dark theme -->
+    <color name="buttonTextColorDark">#FFFFFF</color>
+    <color name="buttonStrokeColorDark">#99000313</color>
+    <color name="buttonBackgroundTintDark">#B2000000</color>
+    <color name="buttonIconTintDark">#FFFFFF</color>
+    <color name="viewTextColorDark">#FFFFFF</color>
+
+    <!-- light theme -->
+    <color name="buttonTextColorLight">#FAE500</color>
+    <color name="buttonStrokeColorLight">#B3179701</color>
+    <color name="buttonBackgroundTintLight">#B3179701</color>
+    <color name="buttonIconTintLight">#FFFFFF</color>
+    <color name="viewTextColorLight">#433E04</color>
 </resources>

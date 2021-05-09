@@ -4,10 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/calc_background"
     android:orientation="vertical"
     tools:context=".MainActivity">
-
 
     <TextView
         android:id="@+id/calcView"
@@ -15,12 +13,11 @@
         android:layout_height="0dp"
         android:layout_marginBottom="0dp"
         android:layout_weight="1"
+        android:freezesText="true"
         android:gravity="bottom|center|end"
         android:text="@string/calcView"
         android:textAlignment="gravity"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#FFFFFF"
-        android:freezesText="true"/>
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     <TextView
         android:id="@+id/resultView"
@@ -30,8 +27,7 @@
         android:gravity="bottom|center|end"
         android:text="@string/resultView"
         android:textAlignment="gravity"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#FFFFFF" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -45,7 +41,7 @@
             android:layout_height="match_parent"
             android:layout_weight="2"
             android:text="@string/button_ac"
-            android:textAlignment="center"/>
+            android:textAlignment="center" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonDel"
@@ -55,9 +51,7 @@
             android:layout_weight="1"
             app:icon="@android:drawable/ic_input_delete"
             app:iconGravity="textEnd"
-            app:iconPadding="@dimen/buttonIconPadding"
-            app:iconSize="@dimen/buttonIconSize"
-            app:iconTint="@color/buttonIconTint" />
+            app:iconPadding="@dimen/buttonIconPadding" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonEquals"
@@ -81,9 +75,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:backgroundTint="#4D05183C"
-            android:text="@string/button_1"
-            app:strokeColor="#80000000" />
+            android:text="@string/button_1" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_2"
@@ -91,9 +83,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:backgroundTint="#4D05183C"
-            android:text="@string/button_2"
-            app:strokeColor="#80000000" />
+            android:text="@string/button_2" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_3"
@@ -101,9 +91,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:backgroundTint="#4D05183C"
-            android:text="@string/button_3"
-            app:strokeColor="#80000000"/>
+            android:text="@string/button_3" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonPlus"
@@ -127,9 +115,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:backgroundTint="#4D05183C"
-            android:text="@string/button_4"
-            app:strokeColor="#80000000" />
+            android:text="@string/button_4" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_5"
@@ -137,9 +123,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:backgroundTint="#4D05183C"
-            android:text="@string/button_5"
-            app:strokeColor="#80000000" />
+            android:text="@string/button_5" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_6"
@@ -147,9 +131,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:backgroundTint="#4D05183C"
-            android:text="@string/button_6"
-            app:strokeColor="#80000000" />
+            android:text="@string/button_6" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonMinus"
@@ -172,9 +154,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:backgroundTint="#4D05183C"
-            android:text="@string/button_7"
-            app:strokeColor="#80000000" />
+            android:text="@string/button_7" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_8"
@@ -182,9 +162,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:backgroundTint="#4D05183C"
-            android:text="@string/button_8"
-            app:strokeColor="#80000000" />
+            android:text="@string/button_8" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_9"
@@ -192,9 +170,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:backgroundTint="#4D05183C"
-            android:text="@string/button_9"
-            app:strokeColor="#80000000" />
+            android:text="@string/button_9" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonMultiply"
@@ -226,9 +202,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:backgroundTint="#4D05183C"
-            android:text="@string/button_0"
-            app:strokeColor="#80000000"/>
+            android:text="@string/button_0" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonPoint"

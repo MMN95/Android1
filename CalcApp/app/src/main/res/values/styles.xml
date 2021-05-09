@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- buttons style(общий стиль для всех кнопок) -->
+    <style name="CalcButtonStyle">
+        <!-- Button sizes -->
+        <item name="android:insetTop">@dimen/buttonInsetTop</item>
+        <item name="android:insetBottom">@dimen/buttonInsetBottom</item>
+        <item name="android:textSize">@dimen/buttonTextSize</item>
+        <item name="cornerRadius">@dimen/buttonCornerRadius</item>
+        <item name="strokeWidth">@dimen/buttonStrokeWidth</item>
+    </style>
+</resources>
