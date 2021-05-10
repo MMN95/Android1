@@ -20,4 +20,6 @@
     <string name="button_divide">÷</string>
     <string name="calcView"> </string>
     <string name="resultView"> </string>
+    <string name="choose_dark_theme">Dark</string>
+    <string name="choose_light_theme">Light</string>
 </resources>

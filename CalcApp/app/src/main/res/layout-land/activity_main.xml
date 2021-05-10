@@ -7,6 +7,27 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <RadioGroup
+        android:id="@+id/radioButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radioButtonChooseDark"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/choose_dark_theme"
+            android:textColor="@color/viewTextColorLight"/>
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radioButtonChooseLight"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/choose_light_theme"
+            android:textColor="@color/viewTextColorDark"/>
+    </RadioGroup>
+
     <TextView
         android:id="@+id/calcView"
         android:layout_width="match_parent"
