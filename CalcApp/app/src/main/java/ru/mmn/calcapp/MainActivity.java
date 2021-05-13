@@ -1,5 +1,9 @@
 package ru.mmn.calcapp;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -7,9 +11,9 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import com.google.android.material.radiobutton.MaterialRadioButton;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends AppCompatActivity implements Constants {
+    private static final int REQUEST_CODE_SETTING_ACTIVITY = 99;
 
-    private final static String keyCalculator = "Calculator";
     TextView calcView;
     TextView resultView;
     Calculator calculator;
@@ -47,11 +51,21 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initThemeChooser();
+
 
         calcView = findViewById(R.id.calcView);
         resultView = findViewById(R.id.resultView);
         calculator = new Calculator();
+
+        // settings button
+        Button buttonSettings = findViewById(R.id.button_settings);
+        buttonSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent runSettings = new Intent(MainActivity.this, SettingsActivity.class);
+                startActivityForResult(runSettings, REQUEST_CODE_SETTING_ACTIVITY);
+            }
+        });
 
         // number buttons
         Button button1 = findViewById(R.id.button_1);
@@ -156,20 +170,13 @@ public class MainActivity extends BaseActivity {
 
     }
 
-    private void initThemeChooser() {
-        initRadioButton(findViewById(R.id.radioButtonChooseDark),
-                DARK);
-        initRadioButton(findViewById(R.id.radioButtonChooseLight),
-                LIGHT);
-        RadioGroup rg = findViewById(R.id.radioButtons);
-        ((MaterialRadioButton)rg.getChildAt(getCodeStyle(DARK))).setChecked(true);
-    }
+    //TODO
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        if (requestCode != REQUEST_CODE_SETTING_ACTIVITY){
+            super.onActivityResult(requestCode, resultCode, data);
+        }
 
-    private void initRadioButton(View button, final int codeStyle){
-        button.setOnClickListener(v -> {
-            setAppTheme(codeStyle);
-            recreate();
-        });
     }
 
 }

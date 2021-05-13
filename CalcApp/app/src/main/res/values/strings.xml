@@ -22,4 +22,6 @@
     <string name="resultView"> </string>
     <string name="choose_dark_theme">Dark</string>
     <string name="choose_light_theme">Light</string>
+    <string name="button_settings">settings</string>
+    <string name="back_button">back</string>
 </resources>
