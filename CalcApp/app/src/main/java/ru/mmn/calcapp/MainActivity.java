@@ -14,20 +14,20 @@ import com.google.android.material.radiobutton.MaterialRadioButton;
 public class MainActivity extends AppCompatActivity implements Constants {
     private static final int REQUEST_CODE_SETTING_ACTIVITY = 99;
 
-    TextView calcView;
-    TextView resultView;
-    Calculator calculator;
+    private TextView calcView;
+    private TextView resultView;
+    private Calculator calculator;
 
     @Override
     public void onSaveInstanceState(@NonNull Bundle instanceState) {
         super.onSaveInstanceState(instanceState);
-        instanceState.putSerializable(keyCalculator, calculator);
+        instanceState.putSerializable(KEY_CALCULATOR, calculator);
     }
 
     @Override
     protected void onRestoreInstanceState(@NonNull Bundle instanceState) {
         super.onRestoreInstanceState(instanceState);
-        calculator = (Calculator) instanceState.getSerializable(keyCalculator);
+        calculator = (Calculator) instanceState.getSerializable(KEY_CALCULATOR);
         setTextViews();
     }
 
@@ -37,14 +37,20 @@ public class MainActivity extends AppCompatActivity implements Constants {
     }
 
     private void setView(TextView resultView, Calculator calculator) {
-        if (calculator.getCurrentAction() == calculator.getAddition())
-            resultView.setText(String.format("%s + ", calculator.getValueOne()));
-        else if (calculator.getCurrentAction() == calculator.getSubtraction())
-            resultView.setText(String.format("%s - ", calculator.getValueOne()));
-        else if (calculator.getCurrentAction() == calculator.getMultiplication())
-            resultView.setText(String.format("%s × ", calculator.getValueOne()));
-        else if (calculator.getCurrentAction() == calculator.getDivision())
-            resultView.setText(String.format("%s ÷ ", calculator.getValueOne()));
+        switch (calculator.getCurrentAction()){
+            case '+':
+                resultView.setText(String.format("%s + ", calculator.getValueOne()));
+                break;
+            case '-':
+                resultView.setText(String.format("%s - ", calculator.getValueOne()));
+                break;
+            case '×':
+                resultView.setText(String.format("%s × ", calculator.getValueOne()));
+                break;
+            case '÷':
+                resultView.setText(String.format("%s ÷ ", calculator.getValueOne()));
+                break;
+        }
     }
 
     @Override
@@ -66,7 +72,6 @@ public class MainActivity extends AppCompatActivity implements Constants {
                 startActivityForResult(runSettings, REQUEST_CODE_SETTING_ACTIVITY);
             }
         });
-
         // number buttons
         Button button1 = findViewById(R.id.button_1);
         button1.setOnClickListener(v -> calcView.setText(String.format("%s1", calcView.getText())));
@@ -114,7 +119,7 @@ public class MainActivity extends AppCompatActivity implements Constants {
             resultView.setText(String.format("%s - ", calculator.getValueOne()));
             calcView.setText(null);
         });
-//
+
         Button buttonMultiply = findViewById(R.id.buttonMultiply);
         buttonMultiply.setOnClickListener(v -> {
             calculator.setCurrentAction(calculator.getMultiplication());

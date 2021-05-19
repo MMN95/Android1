@@ -22,7 +22,7 @@
         android:layout_marginBottom="0dp"
         android:layout_weight="1.5"
         android:gravity="bottom|center|end"
-        android:text="@string/calcView"
+        android:text="@string/calc_view"
         android:textAlignment="gravity"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
 
@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="0dp"
         android:gravity="bottom|center|end"
-        android:text="@string/resultView"
+        android:text="@string/result_view"
         android:textAlignment="gravity"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 

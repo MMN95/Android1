@@ -9,10 +9,10 @@ public class Calculator implements Serializable {
     private double valueOne = Double.NaN;
     private double valueTwo;
 
-    private static final char addition = '+';
-    private static final char subtraction = '-';
-    private static final char multiplication = '×';
-    private static final char division = '÷';
+    private static final char ADDITION = '+';
+    private static final char SUBTRACTION = '-';
+    private static final char MULTIPLICATION = '×';
+    private static final char DIVISION = '÷';
     private char currentAction;
 
     public void setCurrentAction(char currentAction) {
@@ -24,37 +24,45 @@ public class Calculator implements Serializable {
     }
 
     public char getAddition() {
-        return addition;
+        return ADDITION;
     }
 
     public char getSubtraction() {
-        return subtraction;
+        return SUBTRACTION;
     }
 
     public char getMultiplication() {
-        return multiplication;
+        return MULTIPLICATION;
     }
 
     public char getDivision() {
-        return division;
+        return DIVISION;
     }
 
     public void calculate(TextView calcView){
         if(!Double.isNaN(valueOne)) {
             valueTwo = Double.parseDouble(calcView.getText().toString());
             calcView.setText(null);
-            if(currentAction == addition)
-                valueOne = this.valueOne + valueTwo;
-            else if(currentAction == subtraction)
-                valueOne = this.valueOne - valueTwo;
-            else if(currentAction == multiplication)
-                valueOne = this.valueOne * valueTwo;
-            else if(currentAction == division)
-                valueOne = this.valueOne / valueTwo;
+            switch (currentAction) {
+                case ADDITION:
+                    valueOne = this.valueOne + valueTwo;
+                    break;
+                case SUBTRACTION:
+                    valueOne = this.valueOne - valueTwo;
+                    break;
+                case MULTIPLICATION:
+                    valueOne = this.valueOne * valueTwo;
+                    break;
+                case DIVISION:
+                    valueOne = this.valueOne / valueTwo;
+                    break;
+            }
         } else {
             try {
                 valueOne = Double.parseDouble(calcView.getText().toString());
-            } catch (Exception e) {}
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 
